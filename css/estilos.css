@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: smooth;
+    --Azulclaro: #141EDD;
+    --AzuleMedio: #2816c8;
+    --AzulOscuro: hsl(230, 100%, 27%);
+    --Blanco: #f7f7f7;
+    --Negro: #1c1d24;
+    --VerdeAgua: #33cc99;
+    --Verde: #BCDB3A;
+}
+
+body{
+    font-family: 'Foslin Regular', Foslin Regular;
+    background: #f7f7f7;
+}
+
+/** MENU DE NAVEGACION **/
+header{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--Negro);
+}
+.btn-menu .list-container{
+    margin-right: 20px;
+}
+.menu .list-container .lists{
+    display: flex;
+}
+.menu .list-container .lists li{
+    list-style: none;
+}
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--Negro);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.menu .list-container .lists li a.activo{
+    background: var(--Azulclaro);
+    color: var(--Blanco)
+}
+
+.menu .list-container .lists li a:hover{
+    background: var(--Azulclaro);
+    color: var(--Blanco)
+}
+.btn-menu > .fa-bars{
+    display: none;
+}
+/** MENU DE NAVEGACION **/
+
+/** IMG Header**/
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/R.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+.img-header .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.img-header .welcome h1{
+    font-size: 50px;
+    color: #f7f7f7;
+    font-weight: 200;
+}
+.img-header .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #f7f7f7;
+    border: none;
+    margin-top: 5px;
+}
+.img-header .welcome p{
+    font-size: 20px;
+    color: #f7f7f7;
+    margin-top: 20px;
+}
+.img-header .welcome > button{
+    width: 170px;
+    height: 40px;
+    background: var(--Negro);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #f7f7f7;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.img-header .welcome > button:hover{
+    background: var(--Azulclaro);
+}
+/** IMG Header**/
+
+
+/*Historia */
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 40px;
+    font-size: 40px;
+    margin-top: 120px;
+}
+
+.contenedor-historia{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-historia img{
+    width: 40%;
+}
+
+.checklist-historia{
+    width: 45%;
+}
+.historia{
+    margin-bottom: 20px;
+}
+.n-historia{
+    margin-bottom: 7px;
+    color: #000981;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+/***** SERVICIOS *****/
+.galeria{
+    font-family: 'Foslin Regular';
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.galeria h2{
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+    font-size: 40px;
+    color: #f7f7f7;
+}
+
+.contenedor-imagenes{
+    display:flex;
+    width: 50%;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+    border-radius:10px;
+}
+
+.contenedor-imagenes .image{
+    width: 20%;
+    position: relative;
+    height:150px;
+    margin-bottom:30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .5);
+    border-radius:10px;
+}
+.image img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+/***** OVERLAY TEMPERATURA *****/
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: hsla(236, 100%, 25%, 0.801);
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    overflow: hidden;
+}
+.overlay h4{
+    color: #f7f7f7;
+    font-weight: 200;
+    font-size: 20px;   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+}
+.image:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+    border-radius:9px;
+    transition: .5s ease;
+}
+/***** OVERLAY TEMPERATURA *****/
+
+/***** OVERLAY presion *****/
+.overlay2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: hsla(236, 100%, 25%, 0.801);
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    overflow: hidden;
+}
+.overlay2 h4{
+    color: #f7f7f7;
+    font-weight: 200;
+    font-size: 20px;   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.image:hover .overlay2{
+    height: 100%;
+    cursor: pointer;
+    border-radius:9px;
+}
+/***** OVERLAY presion *****/
+
+/***** OVERLAY ELECTRICIDAD *****/
+.overlay3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: hsla(236, 100%, 25%, 0.801);
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    overflow: hidden;
+}
+.overlay3 h4{
+    color: #f7f7f7;
+    font-weight: 200;
+    font-size: 20px;   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.image:hover .overlay3{
+    height: 100%;
+    cursor: pointer;
+    border-radius:9px;
+}
+/***** OVERLAY ELECTRICIDAD *****/
+
+/***** OVERLAY DIMENSIONAL *****/
+.overlay4{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: hsla(236, 100%, 25%, 0.801);
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    overflow: hidden;
+}
+.overlay4 h4{
+    color: #f7f7f7;
+    font-weight: 200;
+    font-size: 20px;   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.image:hover .overlay4{
+    height: 100%;
+    cursor: pointer;
+    border-radius:9px;
+}
+/***** OVERLAY DIMENSIONAL *****/
+
+/***** SERVICIOS *****/
+
+
+/*CLIENTES */ 
+.clientes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;    
+}
+.cont-clientes{
+    width: 30%;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.img-clientes{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.slider{
+    background-color: #ffffff;
+    width: 960px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .5);
+}
+
+.slider::before,.slider::after{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: linear-gradient(to right, #ffff 0%, rgba(225, 225, 225,0) 100%);
+    z-index: 2;
+}
+
+.slider::before{
+    top: 0;
+    left: 0;
+}
+
+.slider::after{
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider .slider-track{
+    display: flex;
+    width: calc(250px * 14);
+    animation: scroll 40s infinite linear;
+}
+
+.slider .slide img{
+    width: 250px;
+    height: 100px;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(calc(-250px * 7))
+    }
+}
+
+/** FOOTER **/
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--Negro);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 50px;
+}
+.footer.deg-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.footer .footer-content{
+    width: 90%;
+    padding-top: 100px;
+    margin: auto;
+}
+.footer .footer-content .footer-title{
+    width: 50%;
+    margin: auto;
+    border: 2px solid #f7f7f7;
+    padding: 20px;
+}
+.footer .footer-content .footer-title h2{
+    text-align: center;
+    color: #f7f7f7;
+    font-size: 30px;
+    font-weight: normal;
+
+}
+/** FOOTER **/
